@@ -20,9 +20,9 @@ build docker image
 ```bat
 $ make docker_build
 ```
-rename docker image and push it to quay.io registry, REPO_NAME=(e.g.)quay.io/misl/appka
+rename docker image and push it to quay.io registry, use variable REPO_NAME
 ```bat
-$ make docker_push
+$ make docker_push REPO_NAME=quay.io/misl/appka
 ```
 
 ### kubernetes  
@@ -30,6 +30,10 @@ $ make docker_push
 create deployment based on YAML file
 ```bat
 $ kubectl create -f deployment.yaml
+```
+delete deployment
+```bat
+$ kubectl delete -f deployment.yaml
 ```
 list the pods in the current namespace
 ```bat

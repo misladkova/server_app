@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: abc
-  replicas: 1
+  replicas: 5
   template:
     metadata:
       labels:
@@ -15,5 +15,7 @@ spec:
       containers:
         - name: abc
           image: abc:latest
+          imagePullPolicy: Never
           ports:
-            - containerPort: 8088
+            - name: http
+              containerPort: 8088

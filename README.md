@@ -27,7 +27,7 @@ $ make docker_push
 
 ### kubernetes  
 
-creating deployment based on YAML file
+create deployment based on YAML file
 ```bat
 $ kubectl create -f deployment.yaml
 ```

@@ -8,4 +8,4 @@ test:
 	mvn test
 
 docker_build:
-	cd ./docker && docker build .
+	cp target/testApp-1.0-SNAPSHOT-jar-with-dependencies.jar docker && cd ./docker && docker build .

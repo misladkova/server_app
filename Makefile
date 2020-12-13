@@ -8,7 +8,7 @@ test:
 	mvn test
 
 docker_build:
-	cp target/testApp-1.0-SNAPSHOT-jar-with-dependencies.jar docker && cd docker && docker build .
+	cp target/testApp-1.0-SNAPSHOT-jar-with-dependencies.jar docker && cd docker && docker build -t abc .
 
 docker_push:
-	docker login quay.io && docker push quay.io/misl/appka
+	docker tag abc ${REPO_NAME} && docker login quay.io && docker push ${REPO_NAME}

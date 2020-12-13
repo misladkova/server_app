@@ -8,7 +8,7 @@ test:
 	mvn test
 
 docker_build:
-	cp target/serverApp-1.0-SNAPSHOT-jar-with-dependencies.jar docker && cd docker && docker build -t myImage .
+	cp target/serverApp-1.0-SNAPSHOT-jar-with-dependencies.jar docker && cd docker && docker build -t myimage .
 
 docker_push:
-	docker tag myImage ${REPO_NAME} && docker login quay.io && docker push ${REPO_NAME}
+	docker tag myimage ${REPO_NAME} && docker login quay.io && docker push ${REPO_NAME}

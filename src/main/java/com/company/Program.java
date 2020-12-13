@@ -24,16 +24,13 @@ public class Program extends AbstractVerticle {
 
         router.route(HttpMethod.GET, "/").handler(ctx -> {
 
-            // This handler will be called for every get request
             HttpServerResponse response = ctx.response();
             response.putHeader("content-type", "text/plain");
 
-            // Write to the response and end it
             System.out.println(response.getStatusCode());
-            response.end("Hello from web server "+ID+" with hostname "+hostname);
+            response.end("Hello from web server " + ID + " with hostname " + hostname);
         });
 
         server.requestHandler(router).listen(8088);
-
     }
 }

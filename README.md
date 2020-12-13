@@ -20,7 +20,7 @@ build docker image
 ```bat
 $ make docker_build
 ```
-rename docker image and push it to quay.io registry, REPO_NAME=e.g. /misl/appka
+rename docker image and push it to quay.io registry, REPO_NAME=(e.g.)quay.io/misl/appka
 ```bat
 $ make docker_push
 ```

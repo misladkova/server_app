@@ -33,7 +33,7 @@ $ kubectl create -f deployment.yaml
 ```
 list the pods in the current namespace
 ```bat
-kubectl get pods -o wide
+$ kubectl get pods -o wide
 ```
 
 
